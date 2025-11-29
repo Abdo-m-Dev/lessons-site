@@ -1,0 +1,7 @@
+.vscode/
+*.log
+*.ini
+.DS_Store
+Thumbs.db
+AppData/
+NTUSER.DAT*
