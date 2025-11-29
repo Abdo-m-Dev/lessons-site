@@ -1,0 +1,237 @@
+
+
+/* =========================
+   Root Variables
+========================= */
+:root {
+  --bg: #f7f7f8;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0d6efd;
+  --accent: #22c55e;
+  --correct-bg: rgba(34, 197, 94, 0.12);
+  --wrong-bg: rgba(239, 68, 68, 0.12);
+  --border: rgba(0,0,0,0.08);
+}
+
+/* =========================
+   Base
+========================= */
+html, body {
+  font-family: "Tajawal", sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+.bg-body {
+  background-color: var(--bg) !important;
+}
+
+.navbar {
+  transition: background-color .3s ease;
+}
+
+/* =========================
+   Cards
+========================= */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  overflow: hidden;
+  animation: fadeUp .6s ease both;
+}
+
+.card-title,
+.lead {
+  color: var(--text);
+}
+
+/* =========================
+   Blockquote
+========================= */
+blockquote.blockquote {
+  border-right: 4px solid var(--primary);
+  background: #fff;
+  color: var(--text);
+}
+
+/* =========================
+   Top Nav
+========================= */
+.top-nav-2 {
+  top: 56px;
+  z-index: 1020;
+}
+
+/* =========================
+   Quiz Styling
+========================= */
+.lesson .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.quiz-score {
+  min-width: 160px;
+  text-align: end;
+}
+
+.form-check.is-correct {
+  background: var(--correct-bg);
+  border-radius: .75rem;
+  padding: .4rem .6rem;
+}
+
+.form-check.is-wrong {
+  background: var(--wrong-bg);
+  border-radius: .75rem;
+  padding: .4rem .6rem;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .5s ease, transform .5s ease;
+}
+
+/* =========================
+   Dark Theme (كما كان)
+========================= */
+.dark {
+  --bg: #0b1220;
+  --card-bg: #111827;
+  --text: #f9fafb;
+  --muted: #f9fafb;
+  --primary: #60a5fa;
+  --accent: #34d399;
+  --correct-bg: rgba(34, 197, 94, 0.18);
+  --wrong-bg: rgba(239, 68, 68, 0.18);
+  --border: rgba(255,255,255,0.08);
+}
+
+.dark .navbar {
+  background-color: #0a2a5f !important;
+}
+
+.dark footer {
+  background-color: #0f172a;
+  color: #f9fafb !important;
+}
+
+.dark .card-title,
+.dark .lead,
+.dark .form-label,
+.dark .quiz-score,
+.dark p,
+.dark li,
+.dark small {
+  color: #f9fafb !important;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff !important;
+}
+
+/* =========================
+   Tables
+========================= */
+.table {
+  border-color: var(--border) !important;
+}
+
+.table thead {
+  background-color: #f1f5f9;
+}
+
+.dark .table {
+  color: #f9fafb !important;
+}
+
+.dark .table thead {
+  background-color: #1f2937 !important;
+  color: #ffffff !important;
+}
+
+.dark .table td,
+.dark .table th {
+  color: #f9fafb !important;
+}
+
+/* =========================
+   Radio Buttons
+========================= */
+.dark .form-check-label {
+  color: #f9fafb !important;
+}
+
+.dark .form-check-input {
+  background-color: #2d3748;
+  border-color: #9ca3af;
+}
+
+.dark .form-check-input:checked {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* =========================
+   Lesson Chip
+========================= */
+.lesson h2 .chip {
+  display: inline-block;
+  font-size: .8rem;
+  color: #fff;
+  background: var(--primary);
+  border-radius: 999px;
+  padding: .2rem .6rem;
+  margin-inline-start: .5rem;
+}
+
+/* =========================
+   تصحيح العناصر البيضاء داخل الدارك مود
+========================= */
+.dark [style*="background:#fff"],
+.dark [style*="background: #fff"],
+.dark [style*="background-color:#fff"],
+.dark [style*="background-color: #fff"],
+.dark .bg-white,
+.dark blockquote.blockquote {
+  color: #000 !important;
+}
+
+.dark [style*="background:#fff"] *,
+.dark [style*="background: #fff"] *,
+.dark [style*="background-color:#fff"] *,
+.dark [style*="background-color: #fff"] *,
+.dark .bg-white *,
+.dark blockquote.blockquote * {
+  color: #000 !important;
+}
